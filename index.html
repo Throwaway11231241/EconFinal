@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<title>Arrow Driver</title>
+		<link rel="icon" href="./Images/Favicon.png">
+		<link rel="stylesheet" href="fancy.css">
+
+		<meta charset="utf-8">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link rel="stylesheet" href="./UnityGame/TemplateData/style.css">
+		<script src="./UnityGame/TemplateData/UnityProgress.js"></script>
+		<script src="./UnityGame/Build/UnityLoader.js"></script>
+		<script>
+			var unityInstance = UnityLoader.instantiate("unityContainer", "./UnityGame/Build/UnityGame.json", {onProgress: UnityProgress});
+		</script>
+	</head>
+	
+	<body style="height: 2000px;">
+		<div class = "TableOfContents" id = "Workaround2">
+			<div class = "RoadImageTopRow" id = "header1"></div>
+			<img src="./Images/RoadHeader2.png" width = "150px" height = "80px">
+			<img src="./Images/RoadHeader3.png" width = "150px" height = "80px">
+			<img src="./Images/RoadHeader4.png" width = "150px" height = "80px">
+			<img src="./Images/RoadHeader5.png" width = "150px" height = "80px">
+			<div class = "RoadImageTopRow" id = "header2"></div>
+			<div style="background-image: url('./Images/Sidewalk2.png');" onmouseover="moveArrow(1);" onmouseleave="moveArrow(0);" onclick="TOCClick(0);" id = "TOC1"> <br> Welcome </div>
+			<div style="background-image: url('./Images/Sidewalk3.png');" onmouseover="moveArrow(2);" onmouseleave="moveArrow(0);" onclick="TOCClick(1);" id = "TOC2"> <br> Product Information	</div>
+			<div style="background-image: url('./Images/Sidewalk4.png');" onmouseover="moveArrow(3);" onmouseleave="moveArrow(0);" onclick="TOCClick(2);" id = "TOC3"> <br> Purchase </div>
+			<div style="background-image: url('./Images/Sidewalk5.png');" onmouseover="moveArrow(4);" onmouseleave="moveArrow(0);" onclick="TOCClick(3);" id = "TOC4"> <br> Contact </div>
+		</div>
+		<div class = "ContainArrowTOC" id = "Workaround1">
+			<img src="./Images/HeaderArrow2.png" class = "ArrowTOC" id = "ArrowTOC"></img> 
+		</div>
+		
+		<div class = "CoolKid" style = "right: 10px;">
+			<div class="BackgroundGrid Phase1" id="Page1">
+				<div class = "Title" id="Title1"> <b>Welcome</b> </div>
+				
+				<div class = "BasicText" id="Text1">
+					Welcome to the future.
+					No longer will you need to concentrate between the streetlights, cars, road, your own car, and your phone completely seperate from everything else.
+					With the invention that'll be described here you'll learn how to make driving easier.
+				</div>
+				<img class = "ImageGeneral" id="Image1" src="./Images/GTA1.png"></img>
+				<!--<div class="ImageGeneral" id="Image1" style="width: 100%; height: 100%; background-image: url('./Images/GTA1.png'); background-size: 100% 100%;"></div>-->
+			</div>
+			<div class="BackgroundGrid" id="Page1.5">
+				<img class = "BigArrowWorker" id="Arrow1" src="./Images/ArrowBig2.png" width="2000" height="1196" style="top: 20%; left: 5%;"></img>
+			</div>
+
+			<div class="BackgroundGrid Phase2" id="Page2">
+				<div class = "Title" id="Title2"> <b>Product Information</b> </div>
+				<!--<img class = "ImageGeneral ImageBigBoy2" id="Image2" src="./Images/ModelImage.png"></img>-->
+				
+				
+				<div class = "BasicText" id="Text2">
+					With the <i> Arrow Driver </i> Invention you will no longer need to look at your phone GPS.
+					Instead this device will project an arrow onto your car window that will show you where to turn next.
+					Click <a id = "Unity" href="javascript:void(0)">here</a> for an interactive demo of the product. (<a id = "Unity2" href="javascript:void(0)">Controls</a>)
+				</div>
+				<img class = "ImageGeneral" id="Image22" src="./Images/Example2.png"></img>
+			</div>
+
+			<div class="BackgroundGrid" id="Page2.5">
+				<img class = "BigArrowWorker" id="Arrow2" src="./Images/ArrowBig3.png" width="2000" height="1196" style="top: 5%; left: 10%;"></img>
+			</div>
+
+			<div class="BackgroundGrid Phase3" id="Page3">
+				<div class = "Title TitleBigBoy" id="Title3"> <b>Purchase</b> </div>
+				<img class = "ImageGeneral" id="Image3" src="./Images/Money.png"></img>
+				<div class = "BasicText" id="Text3">
+					This product has amazing potential and can help prevent accidents.
+					What would you would rather do, spend a fixed price on something that can help forever or gamble with your insurance company?
+					Head over to a <a href="https://docs.google.com/forms/d/e/1FAIpQLSeQm4es-00hUk2G_IPIeUQ7H-gph42c0saTjbm9ftmUfsII6Q/viewform?usp=sf_link">third-party</a> to purchase the item now!
+				</div>
+			</div>
+
+			<div class="BackgroundGrid" id="Page3.5">
+				<img class = "BigArrowWorker" id="Arrow3" src="./Images/ArrowBig4.png" width="2000" height="1196" style="top: 5%; left: 10%;"></img>
+			</div>
+
+			<div class="BackgroundGrid Phase4" id="Page4">
+				<div class = "Title TitleBigBoy2" id="Title4"> <b>Contact</b> </div>
+				<img class = "ImageGeneral" id="Image4" src="./Images/Email2.png"></img>
+				<div></div>
+				<div class = "BasicText" id="Text4">
+					Email: <a href="javascript:void(0)">ArrowDriverGeneral@trihard.home</a>
+					<br>
+					Phone: <a href="javascript:void(0)">+1 (845) 555-6240</a>
+				</div>
+			</div>
+		</div>
+
+		<div class = "Dimout" id="DimOutBackground" style="visibility: hidden;" onclick="goback();">
+			w
+		</div>
+		<div class="CoolKid CoolerKid" id = "InsideOfMeDaddy" style="visibility: hidden; overflow: auto;">
+			<div class="webgl-content" id = "InsideOfMeDaddy2">
+				<div id="unityContainer" style="width: 960px; height: 600px"></div>
+				<div class="footer">
+				  <div class="webgl-logo"></div>
+				  <div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
+				  <div class="title">Model Interactive Demo</div>
+				</div>
+			</div>
+
+			<div class = "BasicText" id = "InsideOfMeDaddy1">
+				W - move camera forward <br>
+				A - move camera to the left <br>
+				S - move camera to the right <br>
+				D - move camera backward <br>
+				E - move camera upward <br>
+				Q - move camera downward <br>
+				<br>
+				Z - Turn the device on/off <br>
+				X - Enable bluetooth (shows arrow) <br>
+				P - Shows road and car example <br>
+				<br>
+				T - Moves arrow up <br>
+				F - Moves arrow to the left <br>
+				H - Moves arrow to the right <br>
+				G - Moves arrow down <br>
+				<br>
+				U - Rotate on X-axis positively <br>
+				J - Rotate on X-axis negatively <br>
+				<br>
+				I - Rotate on Y-axis positively <br>
+				K - Rotate on Y-axis negatively <br>
+				<br>
+				O - Rotate on Z-axis positively <br>
+				L - Rotate on Z-axis negatively <br>
+				<br>
+				C - Reset arrow to default position <br>
+				V -  Reset arrow to default rotation <br>
+			</div>
+		</div>
+		
+		<!--<img style="position: relative; top: 0px; left: 20px; width: 100%; height: 100%;" src="./Images/Page01.png"></img>	
+		<div class = "FooterISuckAtThis">
+			<div class = "RealFooter" id = "Footer"> </div>
+		</div>-->
+	</body>
+
+	<script src="code.js"></script>
+</html>
