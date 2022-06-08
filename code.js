@@ -201,7 +201,7 @@ function scrollBehaviorFunction() {
 	scrollTop = window.pageYOffset || (document.documentElement || document.body.parentNode || document.body).scrollTop;
 	percentage = scrollTop/winheight*100/3;
 	//console.log(percentage);
-	document.getElementById("Workaround1").style.top = scrollTop + "px";
+	//document.getElementById("Workaround1").style.top = scrollTop + "px";
 	document.getElementById("DimOutBackground").style.top = scrollTop + "px";
 	document.getElementById("InsideOfMeDaddy").style.top = scrollTop+topOffset + "px";
 	//Arrow Moves to right spot
@@ -334,13 +334,13 @@ function Resized() {
 	document.getElementById("Arrow3").style.width = store1 + "px";
 
 	//Unity Game Size adjustor
-	document.getElementById("unityContainer").style.width = store2*0.7 + "px";
-	document.getElementById("unityContainer").style.height = store1*0.7 + "px";
-	document.getElementById("InsideOfMeDaddy").style.width = store2*0.8 + "px";
-	document.getElementById("InsideOfMeDaddy").style.height = store1*0.8 + "px";
+	document.getElementById("unityContainer").style.width = window.innerWidth*0.7 + "px";
+	document.getElementById("unityContainer").style.height = window.innerHeight*0.7 + "px";
+	document.getElementById("InsideOfMeDaddy").style.width = window.innerWidth*0.8 + "px";
+	document.getElementById("InsideOfMeDaddy").style.height = window.innerHeight*0.8 + "px";
 
-	document.getElementById("InsideOfMeDaddy").style.left = (window.innerWidth-store2*0.8)/2 + "px";
-	topOffset = (window.innerHeight-store1*0.8)/2;
+	document.getElementById("InsideOfMeDaddy").style.left = (window.innerWidth*0.2)/2 + "px";
+	topOffset = (window.innerHeight*0.2)/2;
 	//Image Size Adjuster
 	easierOnMe = document.getElementById("Image1");
 	if (store1*1.1 < store2)  {
